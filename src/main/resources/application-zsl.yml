@@ -1,0 +1,22 @@
+server:
+  port: 80
+database-name:
+  dev
+#是否激活 swagger true or false
+swagger:
+  enable: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.116.120:3306/${database-name}?characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+is_logic:
+  false
